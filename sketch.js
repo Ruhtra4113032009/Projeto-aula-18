@@ -129,8 +129,9 @@ function draw() {
       gameOver.visible = true;
       restart.visible = true;
       trex.changeAnimation("collided", trex_collided);
-      if(mousePressedOver(restart)) {
+      if(mousePressedOver(restart) || touches.lenght > 0) {
         reset();
+        touches = []
       }
      
       
